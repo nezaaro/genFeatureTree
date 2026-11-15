@@ -1,0 +1,50 @@
+{
+  "emitLegacyScripts": false,
+  "name": "genfeaturetree",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "Source": {
+        "$className": "Folder",
+        "Features": {
+          "$className": "Folder",
+          "Example": {
+            "$className": "Folder",
+            "ExampleServiceClient": {
+              "$path": "src/features/example/ExampleServiceClient.luau"
+            },
+            "ExampleServiceUtils": {
+              "$path": "src/features/example/ExampleServiceUtils.luau"
+            }
+          }
+        },
+        "Modules": {
+          "$className": "Folder"
+        },
+        "Client": {
+          "$path": "src/startup/Client.client.luau"
+        }
+      },
+      "Packages": {
+        "$path": "Packages"
+      }
+    },
+    "ServerScriptService": {
+      "Features": {
+        "$className": "Folder",
+        "Example": {
+          "$className": "Folder",
+          "ExampleServiceServer": {
+            "$path": "src/features/example/ExampleServiceServer.luau"
+          }
+        }
+      },
+      "Modules": {
+        "$className": "Folder"
+      },
+      "Server": {
+        "$path": "src/startup/Server.server.luau"
+      }
+    }
+  }
+}

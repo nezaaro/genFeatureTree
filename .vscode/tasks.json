@@ -1,0 +1,57 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Rojo: Generate Feature Tree",
+            "type": "shell",
+            "command": "npm run generate",
+            "problemMatcher": [],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true
+            }
+        },
+        {
+            "label": "Rojo: Watch Feature Tree",
+            "type": "shell",
+            "command": "npm run watch",
+            "isBackground": true,
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": false
+            }
+        },
+        {
+            "label": "Rojo: Build Project",
+            "type": "shell",
+            "command": "rojo build default.project.json -o build/game.rbxlx",
+            "dependsOn": "Rojo: Generate Feature Tree",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": true
+            }
+        },
+        {
+            "label": "Rojo: Start Development Server",
+            "type": "shell",
+            "command": "rojo serve default.project.json",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "clear": false
+            }
+        }
+    ]
+}
