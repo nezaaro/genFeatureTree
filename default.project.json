@@ -39,9 +39,6 @@
           }
         }
       },
-      "Modules": {
-        "$className": "Folder"
-      },
       "Server": {
         "$path": "src/startup/Server.server.luau"
       }
