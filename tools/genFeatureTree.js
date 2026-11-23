@@ -136,8 +136,7 @@ function createTree() {
         Source: {
           $className: "Folder",
           Features: { $className: "Folder" },
-          Core: { $className: "Folder" },
-          Game: { $className: "Folder" },
+          Modules: { $className: "Folder" },
           Client: { $path: "src/startup/Client.client.luau" },
         },
         Packages: { $path: "Packages" },
@@ -146,7 +145,6 @@ function createTree() {
       ServerScriptService: {
         Features: { $className: "Folder" },
         Server: { $path: "src/startup/Server.server.luau" },
-        Packages: { $path: "ServerPackages" },
       },
     },
   };
