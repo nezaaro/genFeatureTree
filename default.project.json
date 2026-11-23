@@ -8,18 +8,129 @@
         "$className": "Folder",
         "Features": {
           "$className": "Folder",
-          "Example": {
+          "_template": {
             "$className": "Folder",
-            "ExampleServiceClient": {
-              "$path": "src/features/example/ExampleServiceClient.luau"
+            "_TemplateServiceClient": {
+              "$path": "src/features/_template/_TemplateServiceClient.luau"
             },
-            "ExampleServiceUtils": {
-              "$path": "src/features/example/ExampleServiceUtils.luau"
+            "TemplateServiceUtils": {
+              "$path": "src/features/_template/TemplateServiceUtils.luau"
+            }
+          },
+          "Combat": {
+            "$className": "Folder",
+            "Categories": {
+              "$className": "Folder",
+              "Blade": {
+                "$className": "Folder",
+                "BladeClient": {
+                  "$path": "src/features/combat/categories/blade/Client.luau"
+                },
+                "BladeUtils": {
+                  "$path": "src/features/combat/categories/blade/Utils.luau"
+                }
+              }
+            },
+            "CombatServiceClient": {
+              "$path": "src/features/combat/CombatServiceClient.luau"
+            },
+            "Modules": {
+              "$className": "Folder",
+              "CombatTypes": {
+                "$path": "src/features/combat/modules/CombatTypes.luau"
+              },
+              "WeaponRegistry": {
+                "$path": "src/features/combat/modules/WeaponRegistry.luau"
+              }
             }
           }
         },
-        "Modules": {
-          "$className": "Folder"
+        "Core": {
+          "$className": "Folder",
+          "Platform": {
+            "$className": "Folder",
+            "Animator": {
+              "$path": "src/core/platform/Animator.luau"
+            },
+            "IsUserInGroup": {
+              "$path": "src/core/platform/IsUserInGroup.luau"
+            },
+            "QuickCommands": {
+              "$path": "src/core/platform/QuickCommands.luau"
+            },
+            "RetryAsync": {
+              "$path": "src/core/platform/RetryAsync.luau"
+            },
+            "SafeTeleport": {
+              "$path": "src/core/platform/SafeTeleport.luau"
+            },
+            "SoundController": {
+              "$path": "src/core/platform/SoundController.luau"
+            }
+          },
+          "Runtime": {
+            "$className": "Folder",
+            "LinkedList": {
+              "$path": "src/core/runtime/LinkedList.luau"
+            },
+            "Loader": {
+              "$path": "src/core/runtime/Loader.luau"
+            },
+            "Pool": {
+              "$path": "src/core/runtime/Pool.luau"
+            },
+            "Task": {
+              "$path": "src/core/runtime/Task.luau"
+            }
+          },
+          "Utils": {
+            "$className": "Folder",
+            "once": {
+              "$path": "src/core/utils/once.luau"
+            }
+          }
+        },
+        "Game": {
+          "$className": "Folder",
+          "Items": {
+            "$className": "Folder",
+            "BladeData": {
+              "$path": "src/game/items/bladeData"
+            },
+            "WeaponCategories": {
+              "$path": "src/game/items/WeaponCategories.luau"
+            }
+          },
+          "Math": {
+            "$className": "Folder",
+            "Lerp": {
+              "$path": "src/game/math/Lerp.luau"
+            },
+            "RoundNumber": {
+              "$path": "src/game/math/RoundNumber.luau"
+            },
+            "SafeUnit": {
+              "$path": "src/game/math/SafeUnit.luau"
+            }
+          },
+          "Modules": {
+            "$className": "Folder",
+            "Configs": {
+              "$path": "src/game/modules/Configs.luau"
+            },
+            "Network": {
+              "$path": "src/game/modules/Network.luau"
+            },
+            "Signals": {
+              "$path": "src/game/modules/Signals.luau"
+            },
+            "StateMachine": {
+              "$path": "src/game/modules/StateMachine.luau"
+            },
+            "Welder": {
+              "$path": "src/game/modules/Welder.luau"
+            }
+          }
         },
         "Client": {
           "$path": "src/startup/Client.client.luau"
@@ -32,15 +143,42 @@
     "ServerScriptService": {
       "Features": {
         "$className": "Folder",
-        "Example": {
+        "_template": {
           "$className": "Folder",
-          "ExampleServiceServer": {
-            "$path": "src/features/example/ExampleServiceServer.luau"
+          "_TemplateServiceServer": {
+            "$path": "src/features/_template/_TemplateServiceServer.luau"
+          }
+        },
+        "Combat": {
+          "$className": "Folder",
+          "Categories": {
+            "$className": "Folder",
+            "Blade": {
+              "$className": "Folder",
+              "BladeServer": {
+                "$path": "src/features/combat/categories/blade/Server.luau"
+              }
+            }
+          },
+          "Classes": {
+            "$className": "Folder",
+            "HitboxServer": {
+              "$path": "src/features/combat/classes/HitboxServer.luau"
+            },
+            "SessionServer": {
+              "$path": "src/features/combat/classes/SessionServer.luau"
+            }
+          },
+          "CombatServiceServer": {
+            "$path": "src/features/combat/CombatServiceServer.luau"
           }
         }
       },
       "Server": {
         "$path": "src/startup/Server.server.luau"
+      },
+      "Packages": {
+        "$path": "ServerPackages"
       }
     }
   }
